@@ -17,6 +17,33 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".view.MainActivity12"
+            android:exported="false" />
+        <activity
+            android:name=".view.MainActivity11"
+            android:exported="false" />
+        <activity
+            android:name=".view.MainActivity10"
+            android:exported="false" />
+        <activity
+            android:name=".view.MainActivity9"
+            android:exported="false" />
+        <activity
+            android:name=".view.MainActivity8"
+            android:exported="false" />
+        <activity
+            android:name=".view.MainActivity7"
+            android:exported="false" />
+        <activity
+            android:name=".view.MainActivity6"
+            android:exported="false" />
+        <activity
+            android:name=".view.MainActivity5"
+            android:exported="false" />
+        <activity
+            android:name=".view.MainActivity4"
+            android:exported="false" />
+        <activity
             android:name=".view.MainActivity3"
             android:exported="false" />
         <activity
