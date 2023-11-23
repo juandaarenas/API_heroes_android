@@ -12,10 +12,10 @@ import retrofit2.http.Path
 interface PlanetaControl {
 
     @GET("planeta")
-    fun get(): Call<List<Planeta>>
+    fun get(): Call<MutableList<Planeta>>
 
     @GET("planeta/{id}")
-    fun getById(@Path("id") id : Int): Call<List<Planeta>>
+    fun getById(@Path("id") id : Int): Call<MutableList<Planeta>>
 
     @POST("planeta")
     fun insert(@Body planeta: Planeta): Call<Planeta>

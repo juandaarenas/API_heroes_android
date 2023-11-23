@@ -11,17 +11,17 @@ import retrofit2.http.Path
 
 interface EquipoControl {
     @GET("equipo")
-    fun get(): Call<List<Equipo>>
+    fun get(): Call<MutableList<Equipo>>
 
     @GET("equipo/{id}")
-    fun getById(@Path("id") id : Long): Call<Equipo>
+    fun getById(@Path("id") id : Int): Call<MutableList<Equipo>>
 
     @POST("equipo")
-    fun insert(@Body equipo: Equipo)
+    fun insert(@Body equipo: Equipo): Call<Equipo>
 
     @PUT("equipo/{id}")
-    fun Update(@Path("id") id : Long, @Body equipo: Equipo)
+    fun Update(@Path("id") id : Int, @Body equipo: Equipo)
 
     @DELETE("equipo/{id}")
-    fun Delete(@Path("id") id : Long)
+    fun Delete(@Path("id") id : Int)
 }

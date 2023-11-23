@@ -21,6 +21,33 @@ class MainActivity2 : AppCompatActivity() {
             button.setOnClickListener {
                 startActivity(Intent(this@MainActivity2,MainActivity3::class.java))
             }
+            btnEquipo.setOnClickListener {
+                startActivity(Intent(this@MainActivity2,MainActivity4::class.java))
+            }
+            btnTipoMision.setOnClickListener {
+                startActivity(Intent(this@MainActivity2,MainActivity5::class.java))
+            }
+            btnPoderes.setOnClickListener {
+                startActivity(Intent(this@MainActivity2,MainActivity6::class.java))
+            }
+            btnHeroes.setOnClickListener {
+                startActivity(Intent(this@MainActivity2,MainActivity7::class.java))
+            }
+            btnPoderesHeroes.setOnClickListener {
+                startActivity(Intent(this@MainActivity2,MainActivity8::class.java))
+            }
+            btnMisiones.setOnClickListener {
+                startActivity(Intent(this@MainActivity2,MainActivity9::class.java))
+            }
+            btnMisionGrupal.setOnClickListener {
+                startActivity(Intent(this@MainActivity2,MainActivity10::class.java))
+            }
+            btnMisionSolo.setOnClickListener {
+                startActivity(Intent(this@MainActivity2,MainActivity11::class.java))
+            }
+            btnAgrupacion.setOnClickListener {
+                startActivity(Intent(this@MainActivity2,MainActivity12::class.java))
+            }
         }
     }
     fun pantalla_Completa(){

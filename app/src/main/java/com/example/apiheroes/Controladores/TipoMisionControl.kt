@@ -12,18 +12,18 @@ import retrofit2.http.Path
 interface TipoMisionControl {
 
     @GET("tipoMision")
-    fun get(): Call<List<TipoMision>>
+    fun get(): Call<MutableList<TipoMision>>
 
     @GET("tipoMision/{id}")
-    fun getById(@Path("id") id : Long): Call<TipoMision>
+    fun getById(@Path("id") id : Int): Call<MutableList<TipoMision>>
 
     @POST("tipoMision")
-    fun insert(@Body tipoMision: TipoMision)
+    fun insert(@Body tipoMision: TipoMision): Call<TipoMision>
 
     @PUT("tipoMision/{id}")
-    fun Update(@Path("id") id : Long, @Body tipoMision: TipoMision)
+    fun Update(@Path("id") id : Int, @Body tipoMision: TipoMision)
 
     @DELETE("tipoMision/{id}")
-    fun Delete(@Path("id") id : Long)
+    fun Delete(@Path("id") id : Int)
 
 }
