@@ -37,9 +37,6 @@ class MainActivity3 : AppCompatActivity() {
             btnRefresh.setOnClickListener {
                 llenarRecyclear()
             }
-            btnEliminar.setOnClickListener {
-
-            }
         }
     }
     fun pantalla_Completa(){

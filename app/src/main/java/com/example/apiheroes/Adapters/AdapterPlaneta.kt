@@ -31,6 +31,26 @@ class AdapterPlaneta (val planeta : MutableList<Planeta>?): RecyclerView.Adapter
             binding.apply {
                 textID.text = "ID : $id"
                 textName.text = "Planeta : $nombrePlaneta"
+                btnEliminar.setOnClickListener {
+                    AlertDialog.Builder(binding.root.context)
+                        .setMessage("¿Desea eliminar la raza $nombrePlaneta?")
+                        .setPositiveButton("Ok") { view, b ->
+                            rutaAPI.builderPlaneta.Delete(planet.id.toInt()).enqueue(object:Callback<Planeta?>{
+                                override fun onResponse(call:Call<Planeta?>,response: Response<Planeta?>){
+                                    Toast.makeText(binding.root.context, "Usted ha eliminado ha $nombrePlaneta", Toast.LENGTH_SHORT).show()
+                                }
+                                override fun onFailure(call:Call<Planeta?>,t:Throwable) {
+                                    Toast.makeText(binding.root.context, "error", Toast.LENGTH_SHORT).show()
+                                }
+                            })
+                            planeta.remove(planet)
+                            this@AdapterPlaneta.notifyItemRemoved(position)
+                        }
+                        .setNegativeButton("Cancel") { _, _ ->
+                            Toast.makeText(binding.root.context, "Usted ha cancelado la eliminacion", Toast.LENGTH_SHORT)
+                                .show()
+                        }.create().show()
+                }
             }
         }
     }

@@ -11,17 +11,17 @@ import retrofit2.http.Path
 
 interface HeroesControl {
     @GET("heroe")
-    fun get():Call<List<Heroes>>
+    fun get():Call<MutableList<Heroes>>
 
     @GET("heroe/{id}")
-    fun getById(@Path("id") id : Long):Call<Heroes>
+    fun getById(@Path("id") id : Int):Call<MutableList<Heroes>>
 
     @POST("heroe")
-    fun insert(@Body heroe:Heroes)
+    fun insert(@Body heroe:Heroes):Call<Heroes>
 
     @PUT("heroe/{id}")
-    fun Update(@Path("id") id : Long , @Body heroe: Heroes )
+    fun Update(@Path("id") id : Int , @Body heroe: Heroes ):Call<Heroes>
 
     @DELETE("heroe/{id}")
-    fun Delete(@Path("id") id : Long)
+    fun Delete(@Path("id") id : Int):Call<Heroes>
 }

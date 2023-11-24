@@ -21,9 +21,9 @@ interface PlanetaControl {
     fun insert(@Body planeta: Planeta): Call<Planeta>
 
     @PUT("planeta/{id}")
-    fun Update(@Path("id") id : Int, @Body planeta: Planeta)
+    fun Update(@Path("id") id : Int, @Body planeta: Planeta): Call<Planeta>
 
     @DELETE("planeta/{id}")
-    fun Delete(@Path("id") id : Int)
+    fun Delete(@Path("id") id : Int): Call<Planeta>
 
 }
